@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:3000/microhome.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./SkillProject _ Skill-Based Learning 01_files/___vscode_livepreview_injected_script"></script>
+<title>SkillProject | Skill-Based Learning</title>
+
+<style>
+  /* ====== Reset & base ====== */
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background:url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b");
+    color: #172554;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  header {
+    background: linear-gradient(90deg,#005bbb,#003f7d);
+    color: white;
+    padding: 22px 16px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 6px; font-size: 28px; }
+  header p { margin: 0; opacity: .95; }
+
+  /* nav */
+  nav {
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    background:#023a75;
+    padding:10px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight:700;
+    padding:6px 10px;
+    border-radius:6px;
+    transition: background .2s, transform .12s;
+  }
+  nav a:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  /* page container sections */
+  .container {
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 16px;
+  }
+  section.card {
+    background:white;
+    padding:18px;
+    border-radius:10px;
+    box-shadow: 0 6px 18px rgba(9,30,66,0.06);
+    margin-bottom:20px;
+  }
+  h2.section-title { color:#003f7d; margin-bottom:10px; }
+
+  /* team / founders */
+  .founders-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap:16px;
+  }
+  .founder {
+    text-align:center;
+    background:#fbfdff;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #e8f0ff;
+  }
+  .founder img { width:100%; height:160px; object-fit:cover; border-radius:6px; }
+
+  /* courses grid */
+  .courses-grid {
+    display:grid;
+    gap:16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  }
+  .course {
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid #eef6ff;
+    transition: transform .18s ease, box-shadow .18s ease;
+    display:flex;
+    flex-direction:column;
+  }
+  .course:hover { transform: translateY(-8px); box-shadow:0 10px 28px rgba(9,30,66,0.08); }
+  .course img { width:100%; height:150px; object-fit:cover; display:block; }
+  .course .body { padding:12px; flex:1; display:flex; flex-direction:column; }
+  .course h3 { margin:0 0 8px; color:#0b3d91; font-size:18px; }
+  .course p { margin:0 0 10px; color:#475569; flex:1; }
+  .course a.play {
+    margin-top:auto;
+    display:inline-block;
+    text-decoration:none;
+    background:#0b6bd6;
+    color:white;
+    padding:8px 10px;
+    border-radius:6px;
+    font-weight:700;
+  }
+  .course a.play:hover { background:#074aa8; }
+
+  /* profile sample */
+  .profile {
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+  .profile img { width:180px; border-radius:8px; object-fit:cover; }
+  .profile .info { flex:1; }
+
+  /* contact */
+  form label { display:block; font-weight:700; margin:8px 0 6px; }
+  input[type="text"], input[type="email"], textarea {
+    width:100%; padding:10px; border-radius:8px; border:1px solid #ced7ea;
+  }
+  input[type="submit"] {
+    background:#005bbb; color:white; border:none; padding:10px 16px; border-radius:8px;
+    cursor:pointer; margin-top:10px; font-weight:700;
+  }
+  input[type="submit"]:hover { background:#003f7d; transform: translateY(-2px); }
+
+  /* responsive image inside home */
+  .home-top { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+  .home-top img { border-radius:10px; width:320px; max-width:100%; height:auto; object-fit:cover; }
+
+  /* small helpers */
+  .muted { color:#64748b; font-size:14px; }
+  footer {
+    text-align:center;
+    padding:14px 8px;
+    color:white;
+    background:linear-gradient(90deg,#003f7d,#005bbb);
+    margin-top:18px;
+  }
+
+  @media (max-width:520px) {
+    nav { gap:10px; padding:8px; }
+    .course img { height:130px; }
+  }
+  
+</style>
+<style>
+  #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    background: #003f7d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+</style></head>
+
+
+<body><button id="topBtn" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;})">↑ Top</button>
+
+
+
+  <header>
+    <h1>SkillProject</h1>
+    <p>Quality, skill-based learning — practical courses for every student</p>
+  </header>
+
+  <nav>
+    <a href="http://127.0.0.1:3000/microhome.html">Home</a>
+    <a href="http://127.0.0.1:3000/microcourses.html">Courses</a>
+    <a href="http://127.0.0.1:3000/microachievements.html">Achievements</a>
+     <a href="http://127.0.0.1:3000/SDG%204_1.html">About</a>
+    <a href="http://127.0.0.1:3000/MICRO%20contact%201.html">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- HOME -->
+<section id="home" class="card" style="padding: 30px;">
+
+  <h2 class="section-title" style="font-size: 28px; margin-bottom: 12px;">What Should You Learn?</h2>
+
+  <div class="home-top" style="margin-top: 15px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+
+    <div style="flex: 1; min-width: 280px; font-size: 17px; line-height: 1.6;">
+      <p>In today’s world, having just theoretical knowledge is not enough. To grow and stand out, students must focus on <b>practical, skill-based learning</b>. Our platform helps you gain job-ready skills in multiple domains:</p>
+      
+      <ul style="margin-top:10px;">
+        <li>💻 <b>Coding</b> – Learn basic programming to boost logic and problem-solving.</li>
+        <li>📚 <b>Subject Lectures</b> – Focus on your syllabus for better exam preparation.</li>
+        <li>🍳 <b>Cooking Skills</b> – Learn recipes and everyday survival cooking.</li>
+        <li>🗣️ <b>Soft Skills</b> – Improve communication, confidence &amp; presentation.</li>
+      </ul>
+
+      <p>Our courses are:</p>
+      <ul>
+        <li>✔ Short and practical</li>
+        <li>✔ Easy to understand (with videos)</li>
+        <li>✔ Designed for real-world use</li>
+      </ul>
+
+      <p style="margin-top:10px; font-style: italic;">
+        “Knowledge is of no value unless you put it into practice.” – Anton Chekhov
+      </p>
+
+      <p class="muted" style="margin-top:15px;">👉 Click <b>Courses</b> in the navigation above to explore full tutorials and skill-growth opportunities.</p>
+    </div>
+
+    <img src="./SkillProject _ Skill-Based Learning 01_files/photo-1487017159836-4e23ece2e4cf" alt="Skills" style="flex:1; width:100%; max-width:380px; border-radius:10px;">
+  </div>
+
+</section>
+</div></body></html>
